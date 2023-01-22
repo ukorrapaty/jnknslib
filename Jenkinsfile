@@ -22,6 +22,7 @@ pipeline {
                 echo 'Building..'
                 script {
                     sh "ls"
+                    sh "ls /var/lib/jenkins/test_wk/${env.JOB_NAME}"
                 }
             }
         }
