@@ -20,6 +20,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                script {
+                    sh "ls"
+                }
             }
         }
         stage('Test') {
