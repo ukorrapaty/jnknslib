@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
             label ''
-            customWorkspace "/home/ec2-user/jenkns_wkspc/${env.JOB_NAME}"
+            customWorkspace "/var/lib/jenkins/test_wk/${env.JOB_NAME}"
         }
     }
 
