@@ -1,6 +1,7 @@
 pipeline {
     agent {
         node {
+            label ''
             customWorkspace "/root/jenkns_wkspc/${env.JOB_NAME}"
         }
     }
