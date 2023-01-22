@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('jnkns_lib')
+@Library('jnkns_lib') _
 
 pipeline {
     agent {
