@@ -1,3 +1,7 @@
+#!groovy
+
+@Library('jnkns_lib')
+
 pipeline {
     agent {
         node {
