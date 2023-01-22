@@ -11,7 +11,7 @@ pipeline {
                 checkout scmGit(
                     branches: [[name: branch]],
                     extensions: [lfs()],
-                    userRemoteConfigs: [[credentialsId: 'root'. url:'git@github.com:ukorrapaty/TestJenkinsSetup.git']]
+                    userRemoteConfigs: [[credentialsId: 'root', url:'git@github.com:ukorrapaty/TestJenkinsSetup.git']]
                     )
             }
         }
