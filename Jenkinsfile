@@ -7,12 +7,14 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            script {
-                checkout scmGit(
-                    branches: [[name: branch]],
-                    extensions: [lfs()],
-                    userRemoteConfigs: [[credentialsId: 'root', url:'git@github.com:ukorrapaty/TestJenkinsSetup.git']]
+            steps {
+                script {
+                    checkout scmGit(
+                        branches: [[name: branch]],
+                        extensions: [lfs()],
+                        userRemoteConfigs: [[credentialsId: 'root', url:'git@github.com:ukorrapaty/TestJenkinsSetup.git']]
                     )
+                }
             }
         }
         stage('Build') {
