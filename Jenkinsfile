@@ -18,10 +18,12 @@ pipeline {
                         branches: [[name: 'master']],
                         userRemoteConfigs: [[credentialsId: '69b883b0-79be-47c7-a13f-9821b9bdeee0', url:'git@github.com:ukorrapaty/TestJenkinsSetup.git']]
                     )
-		    checkout scmGit(
-                        branches: [[name: 'master']],
-                        userRemoteConfigs: [[credentialsId: '69b883b0-79be-47c7-a13f-9821b9bdeee0', url:'git@github.com:ukorrapaty/jnknslib.git']]
-                    )
+		    dir('jnknslib') {
+		    	checkout scmGit(
+                        	branches: [[name: 'master']],
+                        	userRemoteConfigs: [[credentialsId: '69b883b0-79be-47c7-a13f-9821b9bdeee0', url:'git@github.com:ukorrapaty/jnknslib.git']]
+                    	)
+		    }
                 }
             }
         }
