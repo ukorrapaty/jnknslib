@@ -1,3 +1,3 @@
-def call (String name = 'rebase.py') {
-  echo "Parameter is : ${name}"
+def call (String srcName = 'rebase.py') {
+  echo "Parameter is : ${srcName}"
 }
