@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo 'Testing..'
 		    script {
-			test.libtest()
+			test.libtest
 		    }
             }
         }
