@@ -40,7 +40,7 @@ pipeline {
             steps {
                 echo 'Testing..'
 		    script {
-			chk()
+			sh "python3 Scripts/rebase.py"
 		    }
             }
         }
