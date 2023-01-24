@@ -45,7 +45,8 @@ pipeline {
 			masterNode=Jenkins.getInstance().getComputer('').getHostName()
 		    	echo "Master node is: ${masterNode}"
 			    echo "BUILD URL is: ${BUILD_URL}"
-			    logURL="${BUILD_URL}log"
+			    logURL="${BUILD_URL}log""
+			    logURL=" http://44.211.165.92:8080/job/test/69/log"
 			    echo "Log URL is: ${logURL}"
 			response = httpRequest(
     				authentication:  'uma', 
