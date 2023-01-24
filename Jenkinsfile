@@ -42,7 +42,7 @@ pipeline {
 
 		    script {
 			sh "python3 jnknslib/Scripts/rebase.py"
-			def masterNode=Jenkins.getInstance().getComputer('master').getHostName()
+			masterNode=Jenkins.getInstance().getComputer('master').getHostName()
 		    	echo "Master node is: ${masterNode}"
 			//def response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
