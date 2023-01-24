@@ -46,7 +46,7 @@ pipeline {
 		    	echo "Master node is: ${masterNode}"
 			    echo "BUILD URL is: ${BUILD_URL}"
 			    logURL="${BUILD_URL}/log"
-			    echo "Log URL is: ${LOG_URL}"
+			    echo "Log URL is: ${logURL}"
 			response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
    				consoleLogResponseBody: true,
