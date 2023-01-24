@@ -44,6 +44,7 @@ pipeline {
 			sh "python3 jnknslib/Scripts/rebase.py"
 			masterNode=Jenkins.getInstance().getComputer('').getHostName()
 		    	echo "Master node is: ${masterNode}"
+			    echo "BUILD URL is: ${BUILD_URL}"
 			//def response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
    // consoleLogResponseBody: true,
