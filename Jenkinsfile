@@ -39,11 +39,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-		def masterNode=Jenkins.getInstance().getComputer('master').getHostName()
-		    echo "Master node is: ${masterNode}"
+
 		    script {
 			sh "python3 jnknslib/Scripts/rebase.py"
-			
+			def masterNode=Jenkins.getInstance().getComputer('master').getHostName()
+		    	echo "Master node is: ${masterNode}"
 			//def response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
    // consoleLogResponseBody: true,
