@@ -45,7 +45,7 @@ pipeline {
 			masterNode=Jenkins.getInstance().getComputer('').getHostName()
 		    	echo "Master node is: ${masterNode}"
 			    echo "BUILD URL is: ${BUILD_URL}"
-			    logURL="${BUILD_URL}/log"
+			    logURL="${BUILD_URL}log"
 			    echo "Log URL is: ${logURL}"
 			//response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
@@ -53,7 +53,7 @@ pipeline {
 			//	url:  ${logURL}, 
     			//	wrapAsMultipart: false
 			//)
-			response = httpRequest "http://44.211.165.92:8080/job/test/64//log"
+			    response = httpRequest ${logURL}
 			    echo "Response is: ${response}"
 		    }
             }
