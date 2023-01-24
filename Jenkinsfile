@@ -45,7 +45,7 @@ pipeline {
 			masterNode=Jenkins.getInstance().getComputer('').getHostName()
 		    	echo "Master node is: ${masterNode}"
 			    echo "BUILD URL is: ${BUILD_URL}"
-			    logURL=${BUILD_URL}+"/log"
+			    logURL="${BUILD_URL}/log"
 			    echo "Log URL is: ${LOG_URL}"
 			response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
