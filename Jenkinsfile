@@ -45,12 +45,15 @@ pipeline {
 			masterNode=Jenkins.getInstance().getComputer('').getHostName()
 		    	echo "Master node is: ${masterNode}"
 			    echo "BUILD URL is: ${BUILD_URL}"
-			//def response = httpRequest(
+			    logURL=${BUILD_URL}+"/log"
+			    echo "Log URL is: ${LOG_URL}"
+			response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
-   // consoleLogResponseBody: true,
-   // url:  env.MyURI, 
-    //wrapAsMultipart: false
-//)
+   				consoleLogResponseBody: true,
+				url:  ${LOG_URL}, 
+    				wrapAsMultipart: false
+			)
+			    echo "Response is: ${response}"
 		    }
             }
         }
