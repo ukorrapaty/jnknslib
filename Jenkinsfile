@@ -50,7 +50,7 @@ pipeline {
 			response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
    				consoleLogResponseBody: true,
-				url:  ${LOG_URL}, 
+				url:  ${logURL}, 
     				wrapAsMultipart: false
 			)
 			    echo "Response is: ${response}"
