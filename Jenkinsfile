@@ -53,7 +53,7 @@ pipeline {
 			//	url:  ${logURL}, 
     			//	wrapAsMultipart: false
 			//)
-			    response = httpRequest ${logURL}
+			    response = httpRequest "${logURL}"
 			    echo "Response is: ${response}"
 		    }
             }
