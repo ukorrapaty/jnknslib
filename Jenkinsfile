@@ -47,12 +47,13 @@ pipeline {
 			    echo "BUILD URL is: ${BUILD_URL}"
 			    logURL="${BUILD_URL}/log"
 			    echo "Log URL is: ${logURL}"
-			response = httpRequest(
+			//response = httpRequest(
     			//	authentication:  env.MY_CREDENTIAL, 
-   				consoleLogResponseBody: true,
-				url:  ${logURL}, 
-    				wrapAsMultipart: false
-			)
+   			//	consoleLogResponseBody: true,
+			//	url:  ${logURL}, 
+    			//	wrapAsMultipart: false
+			//)
+			response = httpRequest "http://44.211.165.92:8080/job/test/64//log"
 			    echo "Response is: ${response}"
 		    }
             }
